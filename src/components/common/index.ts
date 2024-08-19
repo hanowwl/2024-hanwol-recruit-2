@@ -8,3 +8,4 @@ export * from "./QuestionCard";
 export * from "./TeamBox";
 export * from "./EventCard";
 export * from "./BottomBox";
+export * from "./CheatBox"

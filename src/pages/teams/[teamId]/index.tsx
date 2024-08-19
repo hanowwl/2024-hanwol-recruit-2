@@ -2,8 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 
 import { useRouter } from "next/router";
 
-import { Container, Text } from "src/components";
-import { ApplyingButton } from "src/components/common/ApplyingButton";
+import { CheatBox, Container, Text } from "src/components";
 import { TeamIntroduce } from "src/components/teams";
 import { TEAM_ID_TO_TEXT, TEAM_LIST, TeamId } from "src/constant";
 import { useQueryParams } from "src/hooks";
@@ -20,8 +19,6 @@ export default function TeamPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   const activeTeam = useMemo(() => TEAM_LIST.find((v) => v.id === teamId), [teamId]);
-
-  const [isApplyingButtonActive, setApplyingButtonActive] = useState(true);
 
   useEffect(() => {
     setIsLoading(false);
@@ -52,11 +49,7 @@ export default function TeamPage() {
               {TEAM_LIST.map(({ id, name }) => (
                 <S.TeamItem
                   key={id}
-                  onClick={() => {
-                    id === "event" || id === "account" || id === "exercise"
-                      ? (setApplyingButtonActive(false), route.push(`/teams/${id}`))
-                      : (setApplyingButtonActive(true), route.push(`/teams/${id}`));
-                  }}
+                  onClick={() => route.push(`/teams/${id}`)}
                   isActive={!isLoading && teamId === id}
                 >
                   {name}
@@ -64,10 +57,9 @@ export default function TeamPage() {
               ))}
             </S.TeamList>
           )}
-
           {activeTeam && <TeamIntroduce sections={activeTeam.sections} />}
         </S.TeamIntroduceContainer>
-        <ApplyingButton isActive={isApplyingButtonActive} />
+        <CheatBox />
       </Container>
     </S.TeamContainer>
   );
