@@ -1,0 +1,50 @@
+{
+  "name": "recruit.hanum.us",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@webview-bridge/react-native": "^1.3.3",
+    "framer-motion": "^11.0.5",
+    "framer-motion-ticker": "^1.0.19",
+    "next": "14.1.0",
+    "next-seo": "^6.5.0",
+    "react": "^18.2.0",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
+    "react-native-webview": "^13.8.1",
+    "sharp": "^0.33.2",
+    "zustand": "^4.5.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^8.0.3",
+    "pnpm": "^8.15.4",
+    "prettier": "^3.2.5",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*.+(ts|tsx)": [
+      "eslint --fix",
+      "pnpm format"
+    ]
+  }
+}
