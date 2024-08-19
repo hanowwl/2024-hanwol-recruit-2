@@ -9,7 +9,6 @@ export const ApplyingButton = styled.button`
   border-radius: 10px;
   border: none;
 
-
   @media (max-width: 768px) {
     margin: 0 auto;
   }

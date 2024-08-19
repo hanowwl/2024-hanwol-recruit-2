@@ -98,14 +98,10 @@ export const TEAM_LIST: TeamItem[] = [
                 [ 2022 한세어울림마당 서비스 ]
               </Link>
               <br />
-              <div
-                style={{ color: "unset", fontWeight: 700, textDecoration: "none" }}
-              >
+              <div style={{ color: "unset", fontWeight: 700, textDecoration: "none" }}>
                 [ 2023 한세어울림마당 서비스 ]
               </div>
-              <div
-                style={{ color: "unset", fontWeight: 700, textDecoration: "none" }}
-              >
+              <div style={{ color: "unset", fontWeight: 700, textDecoration: "none" }}>
                 [ 2024 한세스포츠한마당 서비스 ]
               </div>
             </div>
