@@ -20,7 +20,7 @@ export const MAIN_SECTIONS = {
     },
     {
       name: "전체 학생회 인원",
-      value: { from: 0, to: 29, suffix: "명" },
+      value: { from: 0, to: 25, suffix: "명" },
     },
     {
       name: "한움 이용자 수",

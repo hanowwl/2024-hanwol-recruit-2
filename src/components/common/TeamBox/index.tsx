@@ -27,7 +27,15 @@ export const TeamBox: React.FC<TeamBoxProps> = ({ team, icon, description, ...pr
     if (window.ReactNativeWebView && isApp) {
       window.ReactNativeWebView.postMessage(TEAM_TEXT_TO_ID[team]);
     } else {
-      route.push(`/teams/${TEAM_TEXT_TO_ID[team]}`);
+      if (
+        TEAM_TEXT_TO_ID[team] === "account" ||
+        TEAM_TEXT_TO_ID[team] === "event" ||
+        TEAM_TEXT_TO_ID[team] === "exercise"
+      ) {
+        alert("해당 부서는 추가 모집을 진행하지 않습니다.");
+      } else {
+        route.push(`/teams/${TEAM_TEXT_TO_ID[team]}`);
+      }
     }
   };
 
