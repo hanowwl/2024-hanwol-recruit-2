@@ -28,7 +28,7 @@ export const BottomBox: React.FC = () => {
             <Image src={GoogleFromIcon} alt="구글폼" quality={100} />
             <S.BottomBoxTextContainer>
               <S.BottomBoxBoldText>학생회에 관심이 있으신가요?</S.BottomBoxBoldText>
-              <S.BottomBoxText>이 팝업을 눌러 학생회에 지원 해보세요!</S.BottomBoxText>
+              <S.BottomBoxText>이 팝업을 눌러 학생회에 지원해 보세요!</S.BottomBoxText>
             </S.BottomBoxTextContainer>
           </S.BottomBoxContentContainer>
         </S.BottomBoxContainer>
