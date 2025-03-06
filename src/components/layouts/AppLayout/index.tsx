@@ -32,7 +32,6 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
     <>
       {!isApp && <Navbar />}
       {children}
-      {!isApp && <BottomBox />}
     </>
   );
 };
